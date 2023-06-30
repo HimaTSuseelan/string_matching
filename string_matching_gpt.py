@@ -1,8 +1,9 @@
 import re
+import os
 import openai
-from api_key import api_key
 import streamlit as st
 
+api_key = os.environ.get('API_KEY')
 openai.api_key = api_key
 
 def calculate_similarity_using_gpt(string1, string2):
