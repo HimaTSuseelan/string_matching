@@ -51,7 +51,7 @@ def main():
         similarity_response = calculate_similarity_using_gpt(string1, string2)
         st.write(f"String 1: {string1}")
         st.write(f"String 2: {string2}")
-        st.write(f"Comment: {similarity_response}")
+        st.write(f"{similarity_response}")
 
 if __name__ == "__main__":
     main()
