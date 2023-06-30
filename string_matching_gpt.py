@@ -8,10 +8,11 @@ openai.api_key = api_key
 
 def calculate_similarity_using_gpt(string1, string2):
 
-    text = f"""Your task is to answer in a consistent style. Compare the two strings given based on thier meanings. 
+    text = f"""Your task is to answer in a consistent style. Compare the two strings given based on their meanings. 
             String 1 = {string1}, String 2 = {string2}. 
-            Find the semantuc similarity between the two strings.
-            Give a value between 0 and 1 to show how much they are related to each other"""
+            Find the semantic similarity between the two strings.
+            Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
+            """
     result = openai.Completion.create(
     model='text-davinci-003',
     prompt=text,
