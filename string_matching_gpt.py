@@ -20,7 +20,7 @@ def calculate_similarity_using_gpt(string1, string2):
     String 1: {string1}
     String 2: {string2}
     Determine the level of similarity between these two strings based on their meanings. Provide your comment on whether they are similar or dissimilar in terms of their meaning.
-    To demonstrate the semantic relatedness, display a value ranging from 0 to 1, where 0 indicates no similarity, and 1 represents complete similarity. The format for displaying the similarity score should be as follows: "Similarity score: obtained value"
+    Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
     """
     result = openai.Completion.create(
     model='text-davinci-003',
