@@ -15,11 +15,11 @@ def calculate_similarity_using_gpt(string1, string2):
     #         """
 
 
-    text = """Your objective is to respond in a consistent manner. 
+    text = """Your task is to respond in a consistent manner. 
     Analyze the two provided strings and evaluate their semantic similarity. Here are the strings to be compared:
     String 1: {string1}
     String 2: {string2}
-    Determine the level of similarity between these two strings based on their meanings. Provide your comment on whether they are similar or dissimilar in terms of their meaning.
+    Find the semantic similarity between the two strings. Comment whether they are similar or not in terms of their meaning.
     Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
     """
     result = openai.Completion.create(
