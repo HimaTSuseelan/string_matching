@@ -8,20 +8,20 @@ openai.api_key = api_key
 
 def calculate_similarity_using_gpt(string1, string2):
 
-    # text = f"""Your task is to answer in a consistent style. Compare the two strings given based on their meanings. 
-    #         String 1 = {string1}, String 2 = {string2}. 
-    #         Find the semantic similarity between the two strings. Comment whether they are similar or not in terms of their meaning.
-    #         Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
-    #         """
+    text = f"""Your task is to answer in a consistent style. Compare the two strings given and find their semantic similarity. 
+            String 1 = {string1}, String 2 = {string2}. 
+            Find the semantic similarity between the two strings. Comment whether they are similar or not in terms of their meaning.
+            Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
+            """
 
 
-    text = """Your task is to respond in a consistent manner. 
-    Analyze the two provided strings and evaluate their semantic similarity. Here are the strings to be compared:
-    String 1: {string1}
-    String 2: {string2}
-    Find the semantic similarity between the two strings. Comment whether they are similar or not in terms of their meaning.
-    Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
-    """
+    # text = """Your task is to respond in a consistent manner. 
+    # Analyze the two provided strings and evaluate their semantic similarity. Here are the strings to be compared:
+    # String 1: {string1}
+    # String 2: {string2}
+    # Find the semantic similarity between the two strings. Comment whether they are similar or not in terms of their meaning.
+    # Display a value between 0 and 1 to show how much they are related to each other in format 'Similarity score: obtained value'
+    # """
     result = openai.Completion.create(
     model='text-davinci-003',
     prompt=text,
